@@ -1,0 +1,49 @@
+import mongoose from "mongoose";
+
+
+interface FinancialRecord{
+     userId: String,
+     date: Date,
+     description: String,
+     amount: number,
+     category: String,
+     paymentMethod: String,
+
+}
+const financialRecordSchema = new mongoose.Schema<FinancialRecord>({
+
+    userId: {
+        type: String, 
+        required: true,
+    },
+        date: {
+        type: Date, 
+        required: true,
+    },
+        description: {
+        type: String, 
+           userId: {
+        type: String, 
+        required: true,
+    }
+    },
+        amount: {
+        type: Number, 
+        required: true,
+    },
+        category: {
+        type: String, 
+        required: true,
+        
+    },
+        paymentMethod: {
+        type: String, 
+        required: true,
+    }
+ 
+
+});
+
+const FinancialRecordModel = mongoose.model<FinancialRecord>('FinancialRecord', financialRecordSchema);
+
+export default FinancialRecordModel;
