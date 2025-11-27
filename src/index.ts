@@ -1,6 +1,3 @@
-// DB_USER: yuzankhadka_db_user
-// DB_PWD: daCRcHxK6FxwIY09
-
 import express, {type Express} from 'express';
 import connectDB from './db.ts';
 import routes from './routes/routes.ts';
